@@ -1,0 +1,27 @@
+{
+  "id": 5,
+  "titulo": "God of War Ragnarök",
+  "desenvolvedora": "Santa Monica Studio",
+  "distribuidora": "Sony Interactive Entertainment",
+  "dataLancamento": "9 de novembro de 2022",
+  "notaMetacritic": 94,
+  "plataformas": ["PC", "PlayStation 5", "PlayStation 4"],
+  "modosDeJogo": ["Um jogador"],
+  "sinopseCompleta": "O Fimbulwinter já começou. Kratos e Atreus devem viajar pelos Nove Reinos em busca de respostas enquanto as forças asgardianas se preparam para a guerra profetizada que trará o fim do mundo. Pelo caminho, eles explorarão paisagens mitológicas deslumbrantes e enfrentarão deuses e monstros nórdicos implacáveis.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 (64-bit)",
+      "processador": "Intel Core i5-4670K / AMD Ryzen 3 1200",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 1060 (6 GB) / AMD Radeon RX 5500 XT (8 GB)",
+      "armazenamento": "190 GB disponíveis em SSD"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11 (64-bit)",
+      "processador": "Intel Core i5-8600 / AMD Ryzen 5 3600",
+      "memoria": "16 GB de RAM",
+      "placaVideo": "NVIDIA GeForce RTX 2060 Super / AMD Radeon RX 5700",
+      "armazenamento": "190 GB disponíveis em SSD"
+    }
+  }
+}

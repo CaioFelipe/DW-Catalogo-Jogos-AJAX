@@ -1,0 +1,27 @@
+{
+  "id": 8,
+  "titulo": "Resident Evil 4 Remake",
+  "desenvolvedora": "CAPCOM Co., Ltd.",
+  "distribuidora": "CAPCOM Co., Ltd.",
+  "dataLancamento": "24 de março de 2023",
+  "notaMetacritic": 93,
+  "plataformas": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S", "iOS"],
+  "modosDeJogo": ["Um jogador"],
+  "sinopseCompleta": "A sobrevivência é apenas o começo. Seis anos se passaram desde o desastre biológico em Raccoon City. Leon S. Kennedy rastreou a filha sequestrada do presidente até uma vila europeia isolada, onde há algo terrivelmente errado com os habitantes locais. Com jogabilidade modernizada, história reformulada e visuais ultra-detalhados na RE Engine, o clássico do survival horror renasce.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 (64-bit)",
+      "processador": "AMD Ryzen 3 1200 / Intel Core i5-7500",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "AMD Radeon RX 560 4GB / NVIDIA GeForce GTX 1050 Ti 4GB",
+      "armazenamento": "60 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11 (64-bit)",
+      "processador": "AMD Ryzen 5 3600 / Intel Core i7 8700",
+      "memoria": "16 GB de RAM",
+      "placaVideo": "AMD Radeon RX 5700 / NVIDIA GeForce GTX 1070",
+      "armazenamento": "60 GB disponíveis em SSD"
+    }
+  }
+}

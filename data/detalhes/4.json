@@ -1,0 +1,27 @@
+{
+  "id": 4,
+  "titulo": "Red Dead Redemption 2",
+  "desenvolvedora": "Rockstar Games",
+  "distribuidora": "Rockstar Games",
+  "dataLancamento": "26 de outubro de 2018",
+  "notaMetacritic": 97,
+  "plataformas": ["PC", "PlayStation 4", "Xbox One"],
+  "modosDeJogo": ["Um jogador", "Multijogador online (Red Dead Online)"],
+  "sinopseCompleta": "América, 1899. O fim da era do Velho Oeste começou. Após um assalto dar errado na cidade de Blackwater, Arthur Morgan e a gangue Van der Linde são forçados a fugir. Com agentes federais e os melhores caçadores de recompensas no seu encalço, a gangue precisa roubar, lutar e escapar pelo coração ríspido dos Estados Unidos para sobreviver.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 - April 2018 Update (v1803)",
+      "processador": "Intel Core i5-2500K / AMD FX-6300",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 770 2GB / AMD Radeon R9 280 3GB",
+      "armazenamento": "150 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11",
+      "processador": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
+      "memoria": "12 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+      "armazenamento": "150 GB disponíveis em SSD"
+    }
+  }
+}

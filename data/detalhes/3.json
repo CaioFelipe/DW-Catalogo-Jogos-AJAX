@@ -1,0 +1,27 @@
+{
+  "id": 3,
+  "titulo": "Cyberpunk 2077",
+  "desenvolvedora": "CD PROJEKT RED",
+  "distribuidora": "CD PROJEKT",
+  "dataLancamento": "10 de dezembro de 2020",
+  "notaMetacritic": 86,
+  "plataformas": ["PC", "PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One"],
+  "modosDeJogo": ["Um jogador"],
+  "sinopseCompleta": "Em Night City, você assume o papel de V, um mercenário urbano em busca de um implante único que carrega o segredo da imortalidade. Personalize ciberespaço, armas, habilidades e tome decisões drásticas enquanto convive com a consciência digitalizada do lendário roqueiro rebelde Johnny Silverhand (interpretado por Keanu Reeves).",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 (64-bit)",
+      "processador": "Intel Core i7-6700 / AMD Ryzen 5 1600",
+      "memoria": "12 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580 8GB",
+      "armazenamento": "70 GB disponíveis em SSD"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11 (64-bit)",
+      "processador": "Intel Core i7-12700 / AMD Ryzen 7 7800X3D",
+      "memoria": "16 GB de RAM",
+      "placaVideo": "NVIDIA GeForce RTX 2060 SUPER / AMD Radeon RX 5700 XT",
+      "armazenamento": "70 GB disponíveis em SSD NVMe"
+    }
+  }
+}

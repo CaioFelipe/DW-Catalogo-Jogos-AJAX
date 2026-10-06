@@ -1,0 +1,27 @@
+{
+  "id": 10,
+  "titulo": "Forza Horizon 5",
+  "desenvolvedora": "Playground Games",
+  "distribuidora": "Xbox Game Studios",
+  "dataLancamento": "9 de novembro de 2021",
+  "notaMetacritic": 92,
+  "plataformas": ["PC", "Xbox Series X/S", "Xbox One"],
+  "modosDeJogo": ["Um jogador", "Multijogador cooperativo", "Multijogador competitivo"],
+  "sinopseCompleta": "Sua aventura Horizon definitiva espera por você! Explore as paisagens vibrantes e em evolução do México em uma ação de condução ilimitada e divertida com centenas dos melhores carros do mundo. Enfrente tempestades de areia tropicais, escale vulcões cobertos de neve e dispute festivais de velocidade com gráficos fotorrealistas e física automotiva de ponta.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 versão 18362.0 ou superior",
+      "processador": "Intel Core i5-4460 / AMD Ryzen 3 1200",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "NVidia GeForce GTX 970 / AMD Radeon RX 470",
+      "armazenamento": "110 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11",
+      "processador": "Intel Core i7-10700K / AMD Ryzen 7 3800XT",
+      "memoria": "16 GB de RAM",
+      "placaVideo": "NVidia GeForce RTX 2070 / AMD Radeon RX 6800 XT",
+      "armazenamento": "110 GB disponíveis em SSD"
+    }
+  }
+}

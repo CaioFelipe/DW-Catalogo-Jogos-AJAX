@@ -1,0 +1,27 @@
+{
+  "id": 6,
+  "titulo": "Hollow Knight",
+  "desenvolvedora": "Team Cherry",
+  "distribuidora": "Team Cherry",
+  "dataLancamento": "24 de fevereiro de 2017",
+  "notaMetacritic": 90,
+  "plataformas": ["PC", "Nintendo Switch", "PlayStation 4", "Xbox One"],
+  "modosDeJogo": ["Um jogador"],
+  "sinopseCompleta": "Forje seu próprio caminho em Hollow Knight! Uma clássica aventura de ação em 2D estilizada em um vasto mundo interconectado. Explore cavernas sinuosas, cidades antigas e ermos mortais; lute contra criaturas bizarras e faça amizade com insetos peculiares em uma jornada de mistério nas profundezas do reino arruinado de Hallownest.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10",
+      "processador": "Intel Core 2 Duo E5200",
+      "memoria": "4 GB de RAM",
+      "placaVideo": "GeForce 9800GTX+ (1GB)",
+      "armazenamento": "9 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11",
+      "processador": "Intel Core i5",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "GeForce GTX 560",
+      "armazenamento": "9 GB disponíveis"
+    }
+  }
+}

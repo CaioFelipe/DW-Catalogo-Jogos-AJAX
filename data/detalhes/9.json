@@ -1,0 +1,27 @@
+{
+  "id": 9,
+  "titulo": "Baldur's Gate 3",
+  "desenvolvedora": "Larian Studios",
+  "distribuidora": "Larian Studios",
+  "dataLancamento": "3 de agosto de 2023",
+  "notaMetacritic": 96,
+  "plataformas": ["PC", "PlayStation 5", "Xbox Series X/S", "macOS"],
+  "modosDeJogo": ["Um jogador", "Multijogador cooperativo online", "Multijogador tela dividida"],
+  "sinopseCompleta": "Abduzido, infectado e perdido. Você está se transformando em um monstro devorador de mentes, mas à medida que a corrupção dentro de você cresce, cresce também o seu poder. Escolha entre 12 classes e 11 raças baseadas nas regras de D&D 5ª Edição e escreva seu próprio épico de liberdade, lealdade e tentação pelo controle em Baldur's Gate 3, eleito Jogo do Ano (GOTY).",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 64-bit",
+      "processador": "Intel I5 4690 / AMD FX 8350",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "Nvidia GTX 970 / RX 480 (4GB+ de VRAM)",
+      "armazenamento": "150 GB disponíveis em SSD"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11 64-bit",
+      "processador": "Intel i7 8700K / AMD r5 3600",
+      "memoria": "16 GB de RAM",
+      "placaVideo": "Nvidia 2060 Super / RX 5700 XT (8GB+ de VRAM)",
+      "armazenamento": "150 GB disponíveis em SSD"
+    }
+  }
+}

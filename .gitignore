@@ -1,0 +1,9 @@
+# Ambientes de desenvolvimento
+.vscode/
+.idea/
+*.log
+
+# Arquivos de sistema
+Thumbs.db
+Desktop.ini
+.DS_Store

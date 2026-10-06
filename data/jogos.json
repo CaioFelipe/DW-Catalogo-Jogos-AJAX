@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "titulo": "The Witcher 3: Wild Hunt",
+    "categoria": "RPG",
+    "resumo": "Acompanhe Geralt de Rívia em uma caçada épica pelo Continente em busca de Ciri, a Criança da Profecia.",
+    "imagem": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    "ano": 2015,
+    "classificacao": "18+"
+  },
+  {
+    "id": 2,
+    "titulo": "Elden Ring",
+    "categoria": "RPG",
+    "resumo": "Explore as Terras Intermédias e enfrente semideuses caídos para restaurar o Anel Prístino e se tornar o Lorde Prístino.",
+    "imagem": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+    "ano": 2022,
+    "classificacao": "16+"
+  },
+  {
+    "id": 3,
+    "titulo": "Cyberpunk 2077",
+    "categoria": "Ficção Científica",
+    "resumo": "Um RPG de ação em mundo aberto ambientado na megalópole futurista e implacável de Night City.",
+    "imagem": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    "ano": 2020,
+    "classificacao": "18+"
+  },
+  {
+    "id": 4,
+    "titulo": "Red Dead Redemption 2",
+    "categoria": "Ação",
+    "resumo": "A saga épica de Arthur Morgan e da gangue Van der Linde na fronteira selvagem dos Estados Unidos no fim do século XIX.",
+    "imagem": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    "ano": 2018,
+    "classificacao": "18+"
+  },
+  {
+    "id": 5,
+    "titulo": "God of War Ragnarök",
+    "categoria": "Ação",
+    "resumo": "Kratos e Atreus partem em uma jornada mitológica por todos os nove reinos em busca de respostas enquanto o Ragnarök se aproxima.",
+    "imagem": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
+    "ano": 2022,
+    "classificacao": "18+"
+  },
+  {
+    "id": 6,
+    "titulo": "Hollow Knight",
+    "categoria": "Aventura",
+    "resumo": "Desbrave as profundezas sombrias do reino esquecido de Hallownest, enfrente criaturas corrompidas e desvende mistérios ancestrais.",
+    "imagem": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=800&q=80",
+    "ano": 2017,
+    "classificacao": "10+"
+  },
+  {
+    "id": 7,
+    "titulo": "Sid Meier's Civilization VI",
+    "categoria": "Estratégia",
+    "resumo": "Construa um império para resistir ao teste do tempo, expandindo suas cidades, pesquisando tecnologias e rivalizando com grandes líderes.",
+    "imagem": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "ano": 2016,
+    "classificacao": "10+"
+  },
+  {
+    "id": 8,
+    "titulo": "Resident Evil 4 Remake",
+    "categoria": "Terror",
+    "resumo": "Leon S. Kennedy viaja até uma vila europeia isolada para resgatar a filha do presidente, enfrentando horrores biológicos inimagináveis.",
+    "imagem": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    "ano": 2023,
+    "classificacao": "18+"
+  },
+  {
+    "id": 9,
+    "titulo": "Baldur's Gate 3",
+    "categoria": "RPG",
+    "resumo": "Reúna seu grupo e retorne aos Reinos Esquecidos em uma narrativa de companheirismo, traição, sacrifício e busca pelo poder absoluto.",
+    "imagem": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=800&q=80",
+    "ano": 2023,
+    "classificacao": "18+"
+  },
+  {
+    "id": 10,
+    "titulo": "Forza Horizon 5",
+    "categoria": "Corrida",
+    "resumo": "Acelere por paisagens deslumbrantes e em constante evolução do México em centenas dos melhores carros esportivos do planeta.",
+    "imagem": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80",
+    "ano": 2021,
+    "classificacao": "Livre"
+  }
+]

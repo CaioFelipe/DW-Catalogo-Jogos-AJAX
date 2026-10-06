@@ -1,0 +1,27 @@
+{
+  "id": 2,
+  "titulo": "Elden Ring",
+  "desenvolvedora": "FromSoftware Inc.",
+  "distribuidora": "Bandai Namco Entertainment",
+  "dataLancamento": "25 de fevereiro de 2022",
+  "notaMetacritic": 96,
+  "plataformas": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S", "Xbox One"],
+  "modosDeJogo": ["Um jogador", "Multijogador cooperativo", "Multijogador competitivo (PvP)"],
+  "sinopseCompleta": "Criado por Hidetaka Miyazaki e George R. R. Martin, Elden Ring transporta o jogador às Terras Intermédias após a destruição do lendário Anel Prístino. Como um Maculado guiado pela graça perdida, você viajará a cavalo por vastas planícies, pântanos pestilentos e masmorras colossais repletas de chefes memoráveis, forjando seu próprio destino rumo ao trono do Lorde Prístino.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10",
+      "processador": "Intel Core i5-8400 / AMD Ryzen 3 3300X",
+      "memoria": "12 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB",
+      "armazenamento": "60 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11",
+      "processador": "Intel Core i7-8700K / AMD Ryzen 5 3600X",
+      "memoria": "16 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 1070 8GB / AMD Radeon RX VEGA 56 8GB",
+      "armazenamento": "60 GB disponíveis em SSD"
+    }
+  }
+}

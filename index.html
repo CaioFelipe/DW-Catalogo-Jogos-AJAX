@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameHub - Catálogo interativo de jogos desenvolvido com AJAX e Bootstrap 5 para avaliação prática de Desenvolvimento Web (UNEMAT).">
+  <meta name="author" content="Caio Felipe Gomes Lopes">
+  <title>GameHub | Catálogo Interativo de Jogos</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%22100%22%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos Próprios Customizados -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- ==========================================
+       ÁREA 1: APRESENTAÇÃO (HEADER + HERO BANNER)
+       ========================================== -->
+  <header class="header-section shadow-sm">
+    <!-- Barra de Navegação Responsiva do Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary sticky-top" aria-label="Navegação Principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-controller text-primary fs-3"></i>
+          <span>Game<span class="text-primary">Hub</span></span>
+        </a>
+
+        <!-- Botão Toggler para Telas Menores -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#inicio">
+                <i class="bi bi-house-door me-1"></i>Início
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#catalogo">
+                <i class="bi bi-grid me-1"></i>Catálogo
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">
+                <i class="bi bi-info-circle me-1"></i>Sobre o Projeto
+              </a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#sobre">
+                <i class="bi bi-person me-1"></i>Caio Felipe
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner de Apresentação -->
+    <section id="inicio" class="hero-banner py-5 py-lg-6 text-center position-relative overflow-hidden">
+      <div class="container position-relative z-1 py-4">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-3 fw-semibold">
+          <i class="bi bi-lightning-charge me-1"></i> Catálogo Dinâmico com AJAX e Bootstrap 5
+        </span>
+        <h1 class="display-4 fw-black text-white mb-3">
+          Explore os Melhores Jogos do Mundo
+        </h1>
+        <p class="lead text-secondary mx-auto mb-4 col-lg-8">
+          Consulte informações detalhadas, notas do Metacritic, requisitos de sistema e sinopses em tempo real, sem recarregar a página através de requisições assíncronas.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#catalogo" class="btn btn-primary btn-lg px-4 rounded-pill shadow-sm">
+            <i class="bi bi-search me-2"></i>Ver Catálogo Completo
+          </a>
+          <a href="#sobre" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+            <i class="bi bi-journal-text me-2"></i>Documentação Técnica
+          </a>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </section>
+  </header>
+
+  <!-- ==========================================
+       ÁREA 2: CATÁLOGO DINÂMICO COM AJAX
+       ========================================== -->
+  <main id="catalogo" class="py-5 bg-darker">
+    <div class="container">
+      
+      <!-- Cabeçalho da Seção do Catálogo -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-2 border-bottom border-secondary pb-3">
+        <div>
+          <span class="text-primary text-uppercase fw-bold small tracking-wider">Acervo Interativo</span>
+          <h2 class="h2 fw-bold text-white mb-0">Catálogo de Jogos</h2>
+        </div>
+        <div class="text-secondary small">
+          <span id="contadorJogos" class="badge bg-secondary">Carregando...</span>
+        </div>
+      </div>
+
+      <!-- Barra de Ferramentas: Busca e Filtro de Categoria -->
+      <section class="card bg-dark border-secondary shadow-sm mb-4" aria-label="Controles de Filtro e Pesquisa">
+        <div class="card-body p-3 p-md-4">
+          <div class="row g-3 align-items-center">
+            
+            <!-- Campo de Busca por Texto -->
+            <div class="col-12 col-md-6 col-lg-5">
+              <label for="campoBusca" class="form-label text-light fw-medium small mb-1">
+                <i class="bi bi-search me-1"></i>Pesquisar jogo:
+              </label>
+              <div class="input-group">
+                <span class="input-group-text bg-secondary border-secondary text-light">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input 
+                  type="search" 
+                  id="campoBusca" 
+                  class="form-control bg-dark text-light border-secondary focus-ring" 
+                  placeholder="Digite o título ou resumo..." 
+                  aria-label="Buscar jogo por título ou resumo"
+                  autocomplete="off"
+                >
+                <button class="btn btn-outline-secondary text-light-emphasis" type="button" id="btnLimparBusca" title="Limpar busca" aria-label="Limpar campo de busca">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Filtro de Categorias em Botões Badges/Pills -->
+            <div class="col-12 col-md-6 col-lg-7">
+              <label class="form-label text-light fw-medium small mb-1 d-block">
+                <i class="bi bi-funnel me-1"></i>Filtrar por Categoria:
+              </label>
+              <div class="d-flex flex-wrap gap-2" id="grupoCategorias" role="group" aria-label="Filtro de categorias">
+                <button type="button" class="btn btn-sm btn-primary active rounded-pill px-3 filtro-btn" data-categoria="todas">
+                  Todas
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="RPG">
+                  RPG
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="Ação">
+                  Ação
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="Aventura">
+                  Aventura
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="Estratégia">
+                  Estratégia
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="Terror">
+                  Terror
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="Ficção Científica">
+                  Ficção Científica
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filtro-btn" data-categoria="Corrida">
+                  Corrida
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ÁREA DE ESTADOS DA INTERFACE (Loading, Erro, Vazio) -->
+
+      <!-- 1. Estado de Carregamento (Loading) -->
+      <div id="estadoCarregamento" class="text-center py-5 my-4" role="status" aria-live="polite">
+        <div class="spinner-border text-primary" style="width: 3.5rem; height: 3.5rem;" role="status">
+          <span class="visually-hidden">Carregando catálogo de jogos...</span>
+        </div>
+        <p class="text-secondary mt-3 mb-0 fw-medium">Carregando dados via requisição assíncrona (AJAX)...</p>
+      </div>
+
+      <!-- 2. Estado de Erro com Botão de Tentar Novamente -->
+      <div id="estadoErro" class="alert alert-danger border-danger-subtle d-none shadow-sm p-4 text-center my-4" role="alert" aria-live="assertive">
+        <i class="bi bi-exclamation-triangle-fill display-5 text-danger d-block mb-3"></i>
+        <h3 class="h4 alert-heading fw-bold">Não foi possível carregar o catálogo</h3>
+        <p class="mb-3 text-light-emphasis" id="mensagemErroTexto">
+          Ocorreu um erro ao buscar os dados do servidor. Certifique-se de que o servidor HTTP local está em execução.
+        </p>
+        <button id="btnTentarNovamente" class="btn btn-danger px-4 rounded-pill">
+          <i class="bi bi-arrow-clockwise me-2"></i>Tentar Novamente
+        </button>
+      </div>
+
+      <!-- 3. Estado Vazio (Sem resultados na busca/filtro) -->
+      <div id="estadoVazio" class="alert alert-dark border-secondary d-none text-center py-5 my-4" role="region" aria-live="polite">
+        <i class="bi bi-search display-5 text-secondary d-block mb-3"></i>
+        <h3 class="h4 fw-bold text-white">Nenhum jogo encontrado</h3>
+        <p class="text-secondary mb-3">Não encontramos nenhum resultado para os termos e categoria selecionados.</p>
+        <button id="btnResetarFiltros" class="btn btn-outline-primary rounded-pill px-4">
+          <i class="bi bi-arrow-counterclockwise me-2"></i>Limpar Filtros e Busca
+        </button>
+      </div>
+
+      <!-- Grade Responsiva de Cards de Jogos (Grid Bootstrap 5) -->
+      <div id="gridJogos" class="row g-4" aria-live="polite">
+        <!-- Itens inseridos dinamicamente pelo JavaScript via AJAX -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+       ÁREA 3: INFORMAÇÕES SOBRE O PROJETO & CRÉDITOS
+       ========================================== -->
+  <section id="sobre" class="py-5 bg-dark border-top border-secondary">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        
+        <div class="col-lg-6">
+          <span class="text-primary text-uppercase fw-bold small tracking-wider">Avaliação Prática</span>
+          <h2 class="h2 fw-bold text-white mb-3">Sobre o Projeto Acadêmico</h2>
+          <p class="text-secondary mb-3">
+            Este website foi desenvolvido como avaliação prática individual da disciplina de 
+            <strong class="text-light">Desenvolvimento Web</strong> da 
+            <strong class="text-light">Universidade do Estado de Mato Grosso (UNEMAT)</strong>, 
+            ministrada pelo <strong class="text-light">Prof. Ivan Luiz Pedroso Pires</strong>.
+          </p>
+          <p class="text-secondary mb-4">
+            O objetivo da atividade é construir um catálogo interativo sem recarregamento de página, 
+            utilizando requisições AJAX puras (Fetch API), HTML5 estruturado e semântico, 
+            estilização com Bootstrap 5 e componentização modal.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="p-3 rounded bg-darker border border-secondary">
+                <span class="text-secondary small d-block">Aluno / Autor:</span>
+                <strong class="text-white d-block">Caio Felipe Gomes Lopes</strong>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 rounded bg-darker border border-secondary">
+                <span class="text-secondary small d-block">Professor:</span>
+                <strong class="text-white d-block">Ivan Luiz Pedroso Pires</strong>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 rounded bg-darker border border-secondary">
+                <span class="text-secondary small d-block">Disciplina:</span>
+                <strong class="text-white d-block">Desenvolvimento Web</strong>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 rounded bg-darker border border-secondary">
+                <span class="text-secondary small d-block">Instituição:</span>
+                <strong class="text-white d-block">UNEMAT</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card bg-darker border-secondary shadow-sm">
+            <div class="card-header bg-transparent border-secondary text-primary fw-bold">
+              <i class="bi bi-check2-circle me-2"></i>Critérios Técnicos Atendidos (10,0 Pontos)
+            </div>
+            <ul class="list-group list-group-flush bg-transparent">
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">HTML Semântico:</strong> Estrutura com header, nav, main, section, article e footer.
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">Layout Responsivo:</strong> Grid system Bootstrap 5 adaptável a celular e PC.
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">Bootstrap 5 UI:</strong> Navbar, cards, formulários e Modal interativo integrado.
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">Listagem Dinâmica (AJAX):</strong> 1ª requisição Fetch para 10 itens com categoria e resumo.
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">Consulta de Detalhes (AJAX):</strong> 2ª requisição Fetch dedicada por ID ao clicar no item.
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">Busca e Filtro:</strong> Filtragem simultânea por texto e categoria sem recarregar a tela.
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent text-secondary border-secondary d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div>
+                  <strong class="text-white">Estados da Interface:</strong> Indicador de carregamento, estado vazio e erro com retry.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RODAPÉ (FOOTER)
+       ========================================== -->
+  <footer class="bg-black text-secondary py-4 border-top border-secondary small">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+      <div>
+        <span>&copy; 2026 <strong>GameHub</strong> — Desenvolvido por <strong>Caio Felipe Gomes Lopes</strong>.</span>
+      </div>
+      <div>
+        <span class="me-3">UNEMAT | Desenvolvimento Web</span>
+        <a href="#inicio" class="text-decoration-none text-primary fw-medium">
+          <i class="bi bi-arrow-up-circle me-1"></i>Voltar ao topo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       COMPONENTE INTERATIVO: MODAL DE DETALHES (BOOTSTRAP 5)
+       Atende à exigência da 2ª requisição AJAX individual
+       ========================================== -->
+  <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-dark text-light border-secondary shadow-lg">
+        
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header border-secondary">
+          <h3 class="modal-title h4 fw-bold text-white d-flex align-items-center gap-2" id="modalDetalhesTitulo">
+            <i class="bi bi-controller text-primary"></i>
+            <span id="modalTitulo">Carregando detalhes...</span>
+          </h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar janela de detalhes"></button>
+        </div>
+
+        <!-- Corpo do Modal -->
+        <div class="modal-body p-4 position-relative">
+          
+          <!-- Spinner de Carregamento da 2ª Requisição AJAX -->
+          <div id="modalLoading" class="text-center py-5">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Carregando informações adicionais do jogo...</span>
+            </div>
+            <p class="text-secondary mt-3 mb-0">Consultando detalhes via requisição assíncrona...</p>
+          </div>
+
+          <!-- Alerta de Erro na Consulta de Detalhes -->
+          <div id="modalErro" class="alert alert-danger d-none my-3" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <span>Não foi possível carregar os detalhes adicionais deste jogo. Tente novamente mais tarde.</span>
+          </div>
+
+          <!-- Conteúdo Renderizado dos Detalhes -->
+          <div id="modalConteudo" class="d-none">
+            
+            <!-- Imagem e Metadados Principais -->
+            <div class="row g-4 mb-4">
+              <div class="col-md-5">
+                <img id="modalImagem" src="" alt="Capa do Jogo" class="img-fluid rounded border border-secondary shadow-sm w-100 object-fit-cover modal-capa">
+              </div>
+              <div class="col-md-7">
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span id="modalCategoria" class="badge bg-primary px-3 py-2">Categoria</span>
+                  <span id="modalClassificacao" class="badge bg-secondary px-3 py-2">Classificação</span>
+                  <span id="modalMetacriticBadge" class="badge bg-success px-3 py-2">
+                    <i class="bi bi-star-fill me-1"></i>Metacritic: <span id="modalMetacritic">--</span>
+                  </span>
+                </div>
+
+                <ul class="list-unstyled text-secondary small mb-0">
+                  <li class="mb-2">
+                    <strong class="text-light"><i class="bi bi-building me-1"></i>Desenvolvedora:</strong>
+                    <span id="modalDesenvolvedora" class="ms-1 text-light-emphasis">--</span>
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-light"><i class="bi bi-globe me-1"></i>Distribuidora:</strong>
+                    <span id="modalDistribuidora" class="ms-1 text-light-emphasis">--</span>
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-light"><i class="bi bi-calendar-event me-1"></i>Lançamento:</strong>
+                    <span id="modalLancamento" class="ms-1 text-light-emphasis">--</span>
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-light"><i class="bi bi-display me-1"></i>Plataformas:</strong>
+                    <span id="modalPlataformas" class="ms-1 text-light-emphasis">--</span>
+                  </li>
+                  <li>
+                    <strong class="text-light"><i class="bi bi-people me-1"></i>Modos de Jogo:</strong>
+                    <span id="modalModos" class="ms-1 text-light-emphasis">--</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Sinopse Completa (Dado Exclusivo da 2ª Requisição) -->
+            <div class="mb-4">
+              <h4 class="h5 text-white fw-bold border-bottom border-secondary pb-2">
+                <i class="bi bi-card-text text-primary me-2"></i>Sinopse e História
+              </h4>
+              <p id="modalSinopse" class="text-secondary leading-relaxed mb-0">--</p>
+            </div>
+
+            <!-- Requisitos de Sistema para PC -->
+            <div>
+              <h4 class="h5 text-white fw-bold border-bottom border-secondary pb-2">
+                <i class="bi bi-cpu text-primary me-2"></i>Requisitos de Sistema (PC)
+              </h4>
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-darker border border-secondary h-100">
+                    <h5 class="h6 text-primary fw-bold mb-2">Requisitos Mínimos</h5>
+                    <ul class="list-unstyled small text-secondary mb-0" id="modalReqMinimos">
+                      <!-- Renderizado via JS -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-darker border border-secondary h-100">
+                    <h5 class="h6 text-success fw-bold mb-2">Requisitos Recomendados</h5>
+                    <ul class="list-unstyled small text-secondary mb-0" id="modalReqRecomendados">
+                      <!-- Renderizado via JS -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Rodapé do Modal -->
+        <div class="modal-footer border-secondary">
+          <button type="button" class="btn btn-secondary px-4 rounded-pill" data-bs-dismiss="modal">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3.3 JavaScript Bundle com Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Lógica da Aplicação com AJAX Puro (Fetch API) -->
+  <script src="js/app.js"></script>
+</body>
+</html>

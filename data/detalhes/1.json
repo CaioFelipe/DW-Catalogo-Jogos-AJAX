@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "titulo": "The Witcher 3: Wild Hunt",
+  "desenvolvedora": "CD PROJEKT RED",
+  "distribuidora": "CD PROJEKT",
+  "dataLancamento": "19 de maio de 2015",
+  "notaMetacritic": 93,
+  "plataformas": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S", "Xbox One", "Nintendo Switch"],
+  "modosDeJogo": ["Um jogador"],
+  "sinopseCompleta": "Em um mundo dilacerado pela guerra e infestado por monstros terríveis, Geralt de Rívia recebe a missão mais perigosa de sua vida: localizar Ciri, uma jovem com sangue ancestral capaz de salvar ou destruir o mundo. Percorra o arquipélago gelado de Skellige, as ruas lamacentas de Novigrad e a terra devastada de Velen enfrentando escolhas morais complexas em uma das obras mais aclamadas dos videogames.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 (64-bit)",
+      "processador": "Intel Core i5-2500K 3.3GHz / AMD Phenom II X4 940",
+      "memoria": "6 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870",
+      "armazenamento": "50 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 11 (64-bit)",
+      "processador": "Intel Core i7-3770 3.4 GHz / AMD FX-8350 4 GHz",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "NVIDIA GeForce GTX 770 / AMD Radeon R9 290",
+      "armazenamento": "50 GB disponíveis em SSD"
+    }
+  }
+}

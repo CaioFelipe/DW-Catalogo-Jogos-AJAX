@@ -1,0 +1,27 @@
+{
+  "id": 7,
+  "titulo": "Sid Meier's Civilization VI",
+  "desenvolvedora": "Firaxis Games",
+  "distribuidora": "2K Games",
+  "dataLancamento": "21 de outubro de 2016",
+  "notaMetacritic": 88,
+  "plataformas": ["PC", "Nintendo Switch", "PlayStation 4", "Xbox One", "iOS", "Android"],
+  "modosDeJogo": ["Um jogador", "Multijogador online", "Multijogador em rede local"],
+  "sinopseCompleta": "Civilization VI oferece novas maneiras de interagir com o seu mundo: as cidades agora se expandem fisicamente pelo mapa, a pesquisa ativa em tecnologia e cultura desbloqueia novos potenciais, e líderes concorrentes perseguirão suas próprias agendas com base em seus traços históricos enquanto você disputa uma das cinco maneiras de alcançar a vitória suprema.",
+  "requisitosSistema": {
+    "minimos": {
+      "so": "Windows 10 64-bit",
+      "processador": "Intel Core i3 2.5 Ghz ou AMD Phenom II 2.6 Ghz",
+      "memoria": "4 GB de RAM",
+      "placaVideo": "1 GB DirectX 11 (AMD 5570 ou nVidia 450)",
+      "armazenamento": "12 GB disponíveis"
+    },
+    "recomendados": {
+      "so": "Windows 10 / 11 64-bit",
+      "processador": "Intel Core i5 2.5 Ghz ou AMD FX8350 4.0 Ghz",
+      "memoria": "8 GB de RAM",
+      "placaVideo": "2 GB DirectX 11 (AMD 7970 ou nVidia 770)",
+      "armazenamento": "16 GB disponíveis em SSD"
+    }
+  }
+}

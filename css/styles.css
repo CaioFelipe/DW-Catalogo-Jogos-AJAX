@@ -1,0 +1,173 @@
+/* ==========================================================
+   ESTILOS PERSONALIZADOS - GAMEHUB (CATÁLOGO DE JOGOS)
+   Desenvolvimento Web | UNEMAT
+   Autor: Caio Felipe Gomes Lopes
+   ========================================================== */
+
+/* Variáveis de Cores e Temas */
+:root {
+  --cor-fundo-escuro: #0f1117;
+  --cor-fundo-cartao: #181b24;
+  --cor-fundo-hover: #1f232e;
+  --cor-primaria: #0d6efd;
+  --cor-primaria-hover: #0b5ed7;
+  --cor-borda: #2d3342;
+  --cor-texto-suave: #9ba3af;
+  --transicao-padrao: all 0.25s ease-in-out;
+}
+
+/* Configurações Globais do Documento */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-fundo-escuro) !important;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Cores de Fundo Utilitárias */
+.bg-darker {
+  background-color: var(--cor-fundo-cartao) !important;
+}
+
+/* ==========================================================
+   ÁREA 1: HERO BANNER & NAVEGAÇÃO
+   ========================================================== */
+.hero-banner {
+  background: radial-gradient(circle at 50% 20%, rgba(13, 110, 253, 0.2) 0%, rgba(15, 17, 23, 1) 75%);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.hero-banner h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ==========================================================
+   ÁREA 2: CARDS DO CATÁLOGO DE JOGOS
+   ========================================================== */
+.card-jogo {
+  background-color: var(--cor-fundo-cartao) !important;
+  border: 1px solid var(--cor-borda) !important;
+  border-radius: 12px;
+  transition: var(--transicao-padrao);
+  overflow: hidden;
+}
+
+.card-jogo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+  border-color: rgba(13, 110, 253, 0.5) !important;
+}
+
+/* Padronização de Imagens dos Cards */
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  background-color: #212529;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-jogo:hover .card-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Badges sobrepostas na imagem do jogo */
+.badge-categoria-float {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(13, 110, 253, 0.9) !important;
+  font-weight: 600;
+}
+
+.badge-ano-float {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  font-weight: 500;
+}
+
+/* ==========================================================
+   CONTROLES DE FILTRO E BUSCA
+   ========================================================== */
+.filtro-btn {
+  transition: var(--transicao-padrao);
+  border-color: var(--cor-borda) !important;
+  color: var(--cor-texto-suave);
+}
+
+.filtro-btn:hover {
+  background-color: var(--cor-fundo-hover);
+  color: #fff;
+  border-color: var(--cor-primaria) !important;
+}
+
+.filtro-btn.active {
+  background-color: var(--cor-primaria) !important;
+  border-color: var(--cor-primaria) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.4);
+}
+
+/* ==========================================================
+   MODAL DE DETALHES (BOOTSTRAP 5)
+   ========================================================== */
+.modal-capa {
+  height: 240px;
+  object-fit: cover;
+}
+
+.modal-content {
+  border-radius: 14px;
+}
+
+/* ==========================================================
+   ACSIBILIDADE E FOCO
+   ========================================================== */
+:focus-visible {
+  outline: 2px solid var(--cor-primaria) !important;
+  outline-offset: 2px;
+}
+
+/* Animações Suaves */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar-fade-in {
+  animation: fadeInCard 0.35s ease-out forwards;
+}
