@@ -5,6 +5,7 @@
 > **Professor:** Ivan Luiz Pedroso Pires  
 > **Aluno / Autor:** Caio Felipe Gomes Lopes  
 > **Data de Submissão:** 05/10/2026  
+> **Link do Repositório GitHub:** [https://github.com/CaioFelipe/DW-Catalogo-Jogos-AJAX](https://github.com/CaioFelipe/DW-Catalogo-Jogos-AJAX)  
 
 ---
 
@@ -146,7 +147,7 @@ Para comprovar o funcionamento do tratamento de falha na requisição assíncron
 ## 7. Instruções de Entrega
 
 1. **Repositório GitHub:**  
-   - Todos os arquivos do projeto devem ser enviados para um repositório no GitHub.
-   - O repositório pode ser público ou privado. Caso seja privado, dê permissão de colaborador para o usuário **`IVANLPPIRES`**.
+   - Repositório público disponível em: [https://github.com/CaioFelipe/DW-Catalogo-Jogos-AJAX](https://github.com/CaioFelipe/DW-Catalogo-Jogos-AJAX)
+   - Contém todos os arquivos, códigos comentados e dados JSON necessários à execução.
 2. **Envio no SIGAA:**  
    - Submeta o link do repositório no portal SIGAA antes do encerramento do prazo em 05/10/2026.
